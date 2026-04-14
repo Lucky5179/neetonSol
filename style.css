@@ -1,0 +1,485 @@
+:root {
+
+  --ink: #ede4ec;
+  --drop: #044317;
+  --white: #eaeaea;
+  --cta-bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  font-family: 'Chewy', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--ink);
+}
+
+/* ====== HERO ====== */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* CTA kanan-atas (kecil seperti Polly) */
+.cta-top {
+  position: absolute;
+  top: 36px;
+  right: 56px;
+  font-family: 'Chewy', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--cta-bg);
+  border: 2px solid var(--ink);
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .15);
+  transition: .2s ease;
+}
+
+.cta-top:hover {
+  transform: translateY(-1px);
+}
+
+/* ====== STACKED TITLES (posisi di atas tengah) ====== */
+.stack {
+  margin-top: 120px;
+  /* dorong ke bawah sedikit dari top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Eyebrow (HEY THERE, I'M) â€“ huruf bulat tebal */
+.eyebrow {
+  font-family: 'Chewy', cursive;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+
+
+.brand {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 180px;
+  line-height: .95;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--white);
+  /* Outline gelap */
+  /* Brown outline */
+  -webkit-text-stroke: 10px #242121;
+  paint-order: stroke fill;
+  text-shadow:
+    0.18em 0.18em 0 #312b2b,
+    0.18em 0.18em 0 #818181;
+}
+
+.sub {
+  font-family: 'Chewy', cursive;
+  font-size: 56px;
+  line-height: 1.05;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.mascot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mascot img {
+  width: 360px;
+  max-width: 38vw;
+  height: auto;
+  animation: floaty 3s ease-in-out infinite;
+}
+
+/* Float halus */
+@keyframes floaty {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+}
+
+/* ====== RESPONSIVE TWEAKS ====== */
+@media (max-width:1200px) {
+  .brand {
+    font-size: 150px;
+    -webkit-text-stroke: 8px var(--ink);
+  }
+
+  .sub {
+    font-size: 48px;
+  }
+
+  .eyebrow {
+    font-size: 42px;
+  }
+}
+
+@media (max-width:900px) {
+  .brand {
+    font-size: 120px;
+    -webkit-text-stroke: 7px var(--ink);
+  }
+
+  .sub {
+    font-size: 40px;
+  }
+
+  .eyebrow {
+    font-size: 36px;
+  }
+
+  .cta-top {
+    right: 24px;
+    top: 26px;
+  }
+}
+
+@media (max-width:640px) {
+  .brand {
+    font-size: 86px;
+    -webkit-text-stroke: 5px var(--ink);
+    letter-spacing: 3px;
+  }
+
+  .sub {
+    font-size: 30px;
+  }
+
+  .eyebrow {
+    font-size: 28px;
+  }
+
+  .mascot img {
+    width: 260px;
+  }
+}
+
+/* Section 2     */
+/* ====== ABOUT SECTION (SECTION 2) ====== */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Chewy&display=swap');
+
+:root {
+  --about-ink: #131111;
+  --about-drop: #312a2a;
+  --about-bg: #cacaca;
+  --about-white: #ffffff;
+}
+
+.about {
+  background: var(--about-bg);
+  padding: 90px 60px;
+}
+
+.about-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.about-img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-img img {
+  width: 460px;
+  max-width: 130%;
+  height: auto;
+  display: block;
+}
+
+.about-text {}
+
+.about-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 110px;
+  line-height: .95;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--about-white);
+  -webkit-text-stroke: 8px var(--about-ink);
+  paint-order: stroke fill;
+  text-shadow: 10px 10px 0 var(--about-drop);
+  margin: 0 0 18px 0;
+}
+
+.about-text p {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 22px;
+  line-height: 1.65;
+  color: var(--about-bg);
+  margin: 18px 0;
+}
+
+.about-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #111;
+  border: 2px solid var(--about-ink);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.about-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, .15);
+}
+
+.about-links img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1100px) {
+  .about-inner {
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+  }
+
+  .about-title {
+    font-size: 90px;
+    -webkit-text-stroke: 7px var(--about-ink);
+    text-shadow: 8px 8px 0 var(--about-drop);
+  }
+
+  .about-text p {
+    font-size: 20px;
+  }
+
+  .about-img img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 70px 28px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .about-img {
+    justify-content: center;
+  }
+
+  .about-title {
+    font-size: 76px;
+    -webkit-text-stroke: 6px var(--about-ink);
+    text-shadow: 6px 6px 0 var(--about-drop);
+  }
+
+  .about-text p {
+    font-size: 19px;
+  }
+
+  .about-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-title {
+    font-size: 58px;
+    -webkit-text-stroke: 5px var(--about-ink);
+    text-shadow: 5px 5px 0 var(--about-drop);
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+
+  .about-img img {
+    width: 260px;
+  }
+
+  .about-links a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-links img {
+    width: 26px;
+  }
+}
+
+
+/* Section3 */
+
+.gallery {
+  background: var(--bg);
+  background: linear-gradient(135deg, #fab780, #fab780);
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.gallery-wrap {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 90px;
+  line-height: .95;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--about-white);
+  -webkit-text-stroke: 10px #c2571f;
+  paint-order: stroke fill;
+  text-shadow:
+    0.18em 0.18em 0 #c2571f,
+    0.18em 0.18em 0 #c2571f;
+  margin-bottom: 48px;
+
+
+
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.gallery-grid a {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 1 / 1;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .gallery-title {
+    font-size: 54px;
+  }
+
+  .gallery-grid {
+    gap: 18px;
+  }
+}
+
+/* ====== FOOTER ====== */
+.site-footer {
+  background: #111;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: .3px;
+}
+
+@keyframes floatyBox {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.gallery-grid a {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 1 / 1;
+  transition: transform .2s ease, box-shadow .2s ease;
+  animation: floatyBox 4s ease-in-out infinite;
+}
+
+.gallery-grid a:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.gallery-grid a:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+.gallery-grid a:nth-child(4n) {
+  animation-delay: 1.5s;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
